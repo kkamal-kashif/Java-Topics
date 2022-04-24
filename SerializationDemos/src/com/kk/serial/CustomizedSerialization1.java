@@ -13,8 +13,9 @@ class Account implements Serializable {
 	String userName = "Bhaskar";
 	transient String pwd = "kajal";
 
-	private void writeObject(ObjectOutputStream os) throws Exception {
-		System.out.println("write");
+	private void writeObject(ObjectOutputStream os) throws Exception { 
+	
+		System.out.println("write object");
 		os.defaultWriteObject();
 		String epwd = "123" + pwd;
 		os.writeObject(epwd);
