@@ -15,7 +15,7 @@ class Account implements Serializable {
 
 	private void writeObject(ObjectOutputStream os) throws Exception { 
 	
-		System.out.println("write object");
+		System.out.println("write   object");  
 		os.defaultWriteObject();
 		String epwd = "123" + pwd;
 		os.writeObject(epwd);
